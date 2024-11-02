@@ -28,9 +28,9 @@ if (!defined('ABSPATH')) exit;
 // Configuration for multi-date picker fields
 $custom_functionality_config = [
     [
-        'form_id' => 1,               // Enter the ID of the form you want to target
-        'field_id' => 6,              // Enter the ID of the field within that form
-        'date_format' => 'mm/dd/yy',     // Enter the desired date format
+        'form_id' => 1,           // Enter the ID of the form you want to target
+        'field_id' => 6,          // Enter the ID of the field within that form
+        'date_format' => 'mm/dd/yy',  // Enter the desired date format
     ],
 ];
 
@@ -207,6 +207,10 @@ function validate_custom_functionality_field($result, $value, $form, $field) {
                 $result['message'] = 'Please select at least one date.';
             }
         }
+    }
+    return $result;
+}
+?>
     }
     return $result;
 }
