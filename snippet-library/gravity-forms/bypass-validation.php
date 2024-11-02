@@ -1,3 +1,4 @@
+<?php
 /**
  * GravityRanger // Gravity Forms // Bypass empty field validation 'At least one field must be filled out'
  * https://gravityranger.com/
