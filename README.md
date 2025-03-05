@@ -1,2 +1,2 @@
-# gravityranger
-Code snippets for tutorials and members access.
+# Gravity Ranger
+Code snippets and plugins.
