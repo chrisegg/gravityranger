@@ -70,7 +70,7 @@ function custom_functionality_css() {
             cursor: pointer;
             width: 16px;
             height: 16px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"%23999\" d=\"M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13zM7 10h5v5H7z\"/></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"%23999\" d=\"M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 17H5V8h14v12zm-7-3c1.66 0 2.99-1.34 2.99-3S13.66 11 12 11s-3 1.34-3 3 1.34 3 3 3z\"/></svg>');
             background-size: 16px;
             background-repeat: no-repeat;
             background-position: center;
@@ -112,7 +112,6 @@ function initialize_custom_functionality_script() {
     if (empty($custom_functionality_config)) {
         return;
     }
-
     ?>
     <script type="text/javascript">
     function initializeMultiDatePickers() {
@@ -120,13 +119,13 @@ function initialize_custom_functionality_script() {
             const fieldSelector = "#input_<?php echo esc_js($config['form_id']); ?>_<?php echo esc_js($config['field_id']); ?>";
             const hiddenFieldSelector = fieldSelector + "_hidden";
             const dateFormat = "<?php echo esc_js($config['date_format']); ?>";
-            
+
             // Maintain selected dates across validation reloads
             const selectedDates = new Set((jQuery(fieldSelector).val() || '').split(', ').filter(Boolean));
 
             jQuery(fieldSelector).wrap('<div class="gf-multi-date-field"></div>');
             jQuery(fieldSelector).after('<span class="calendar-icon"></span>');
-            
+
             // Add hidden field if not present
             if (!jQuery(hiddenFieldSelector).length) {
                 jQuery(fieldSelector).after(`<input type="hidden" id="${hiddenFieldSelector.replace('#', '')}" name="${hiddenFieldSelector.replace('#', '')}" value="${Array.from(selectedDates).join(', ')}">`);
@@ -211,6 +210,3 @@ function validate_custom_functionality_field($result, $value, $form, $field) {
     return $result;
 }
 ?>
-    }
-    return $result;
-}
