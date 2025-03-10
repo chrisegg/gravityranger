@@ -1,8 +1,16 @@
 <?php
-/**
- * Gravity Forms // Multi-Date Picker Field
- * https://gravityranger.com/gravity-forms-multi-date-picker/
- *
+/*
+Plugin Name: Multi-Date Picker Field for Gravity Forms
+Plugin URI: https://gravityranger.com/gravity-forms-multi-date-picker/
+Description: Allows selection of multiple dates in a single Gravity Forms text field.
+Version: 1.1
+Author: Chris Eggleston
+Author URI: https://gravityranger.com
+License: GPL2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
  * Allows selection of multiple dates in a single Gravity Forms text field.
  *
  * Step-by-Step Tutorial: https://gravityranger.com/gravity-forms-multi-date-picker/
@@ -17,8 +25,7 @@
  *    2. Add your field ID
  *    3. Enter your desired format
  * 3. Install the snippet.
- *    1. Add to the functions.php file or a functionality plugin
- *    2. Or download the zip file and install it as a regular plugin
+ *    1. Zip up the file and install it as a regular plugin
  *        - plugin file here: https://gravityranger.com/gravity-forms-multi-date-picker/
  */
 
